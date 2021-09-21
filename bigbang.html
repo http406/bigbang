@@ -1,0 +1,359 @@
+<!--
+╱╭━━┳━┳━┳╮              🧿📣Intersteller ━┫╱┓┣┳━━━╯                    Big Bang..!🥰 
+╱╱╱┃┃╯                            
+━┫╱╰┛╯
+╱╰━━━╯
+DISCLAIMER: The code is for educational purposes only. You can use it for educational purposes only not for commercial uses. Special thanks to Nicholas Lobo. He created most of the parts and I put random colors and angel fixations for the effects to make it more interactive. My purpose of making the project is for education only not for commercial usages, at all. Enjoy.
+
+
+📌 Never forget to mention credit and credentials, if you use others creation coz they deserve it. Thanks a lot. 
+
+
+The Big Bang theory is a cosmological model of the observable universe from the earliest known periods through its subsequent large-scale evolution. The model describes how the universe expanded from an initial state of extremely high density and high temperature, and offers a comprehensive explanation for a broad range of observed phenomena, including the abundance of light elements, the cosmic microwave background (CMB) radiation, and large-scale structure. Crucially, the theory is compatible with Hubble-Lemaître law – the observation that the farther away galaxies are, the faster they are moving away from Earth. Extrapolating this cosmic expansion backwards in time using the known laws of physics, the theory describes a high density state preceded by a singularity in which space and time lose meaning. There is no evidence of any phenomena prior to the singularity. Detailed measurements of the expansion rate of the universe place the Big Bang at around 13.8 billion years ago, which is thus considered the age of the universe. After its initial expansion, the universe cooled sufficiently to allow the formation of subatomic particles, and later atoms. Giant clouds of these primordial elements – mostly hydrogen, with some helium and lithium – later coalesced through gravity, forming early stars and galaxies, the descendants of which are visible today. Besides these primordial building materials, astronomers observe the gravitational effects of an unknown dark matter surrounding galaxies. Most of the gravitational potential in the universe seems to be in this form, and the Big Bang theory and various observations indicate that it is not conventional baryonic matter that forms atoms. Measurements of the redshifts of supernovae indicate that the expansion of the universe is accelerating, an observation attributed to dark energy's existence.
+
+Georges Lemaître first noted in 1927 that an expanding universe could be traced back in time to an originating single point, which he called the "primeval atom". For several decades, the scientific community was divided between supporters of the Big Bang and the rival steady-state model, but a wide range of empirical evidence has strongly favored the Big Bang, which is now universally accepted. Edwin Hubble confirmed through analysis of galactic redshifts in 1929 that galaxies are indeed drifting apart; this is important observational evidence for an expanding universe. In 1964, the CMB was discovered, which was crucial evidence in favor of the hot Big Bang model, since that theory predicted a uniform background radiation throughout the universe.
+
+Expansion of space:
+The expansion of the Universe was inferred from early twentieth century astronomical observations and is an essential ingredient of the Big Bang theory. Mathematically, general relativity describes spacetime by a metric, which determines the distances that separate nearby points. The points, which can be galaxies, stars, or other objects, are specified using a coordinate chart or "grid" that is laid down over all spacetime. The cosmological principle implies that the metric should be homogeneous and isotropic on large scales, which uniquely singles out the Friedmann–Lemaître–Robertson–Walker (FLRW) metric. This metric contains a scale factor, which describes how the size of the universe changes with time. This enables a convenient choice of a coordinate system to be made, called comoving coordinates. In this coordinate system, the grid expands along with the universe, and objects that are moving only because of the expansion of the universe, remain at fixed points on the grid. While their coordinate distance (comoving distance) remains constant, the physical distance between two such co-moving points expands proportionally with the scale factor of the universe. The Big Bang is not an explosion of matter moving outward to fill an empty universe. Instead, space itself expands with time everywhere and increases the physical distances between comoving points. In other words, the Big Bang is not an explosion in space, but rather an expansion of space. Because the FLRW metric assumes a uniform distribution of mass and energy, it applies to our universe only on large scales—local concentrations of matter such as our galaxy do not necessarily expand with the same speed as the whole Universe.
+
+Horizons:
+An important feature of the Big Bang spacetime is the presence of particle horizons. Since the universe has a finite age, and light travels at a finite speed, there may be events in the past whose light has not yet had time to reach us. This places a limit or a past horizon on the most distant objects that can be observed. Conversely, because space is expanding, and more distant objects are receding ever more quickly, light emitted by us today may never "catch up" to very distant objects. This defines a future horizon, which limits the events in the future that we will be able to influence. The presence of either type of horizon depends on the details of the FLRW model that describes our universe.
+
+Our understanding of the universe back to very early times suggests that there is a past horizon, though in practice our view is also limited by the opacity of the universe at early times. So our view cannot extend further backward in time, though the horizon recedes in space. If the expansion of the universe continues to accelerate, there is a future horizon as well.
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+        body {
+    background-color: #000;
+    margin: 0px;
+    overflow: hidden;
+}
+
+
+
+
+
+
+/*
+━━━╮""""''''''
+━━╮╰╮┊┊┊┊┊┊
+┊┊╰╮╰━▂▂▂▂┊┊┊┊┊┊
+┊▂╱▔╲▔╱┏┳╮╲┊┊ᶤ.╭╮
+▂╲▂▂╱╲╲╰┻┛╱▔▔▔▔┃
+╲▂▂╱╭╯╱▔▔╱▔▔▔▽▽╯ 
+┊╱╱╭╯╱▔▔▔╲▂▂△▂△╮  Thanks for visiting the 
+━━━╯╱╱╭━━━━━━━━╯   code🖐️
+
+*/
+
+
+    </style>
+        <title>Page Title</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.js" integrity="sha512-/kGR9IsoP6MadXPkWOuyvp84Ic3swcWcpij/bzrXe2qXwRQD3JAwKMCFX90ZgxOJ33+Jd7hYheF01XSJEalLsg==" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    </head>
+    <body>
+        
+<script>
+    //alert("🧿📣Intersteller || Big Bang..!\n\n\n👉The Big Bang theory is a cosmological model of the observable universe from the earliest known periods through its subsequent large-scale evolution.\n\n\n👉It is three.js project. Everytime you run the code, inner circle presented with new color. Thanks for visiting. Enjoy🥰");
+//DOM loader
+window.addEventListener('load', checkJSLoaded)
+
+function checkJSLoaded() {
+
+// stats.js - http://github.com/mrdoob/stats.js
+
+var Stats=function(){function h(a){c.appendChild(a.dom);return a}function k(a){for(var d=0;d<c.children.length;d++)c.children[d].style.display=d===a?"block":"none";l=a}var l=0,c=document.createElement("div");c.style.cssText="position:fixed;top:0;left:0;cursor:pointer;opacity:0.9;z-index:10000";c.addEventListener("click",function(a){a.preventDefault();k(++l%c.children.length)},!1);var g=(performance||Date).now(),e=g,a=0,r=h(new Stats.Panel("FPS","#0ff","#002")),f=h(new Stats.Panel("MS","#0f0","#020"));
+if(self.performance&&self.performance.memory)var t=h(new Stats.Panel("MB","#f08","#201"));k(0);return{REVISION:16,dom:c,addPanel:h,showPanel:k,begin:function(){g=(performance||Date).now()},end:function(){a++;var c=(performance||Date).now();f.update(c-g,200);if(c>e+1E3&&(r.update(1E3*a/(c-e),100),e=c,a=0,t)){var d=performance.memory;t.update(d.usedJSHeapSize/1048576,d.jsHeapSizeLimit/1048576)}return c},update:function(){g=this.end()},domElement:c,setMode:k}};
+Stats.Panel=function(h,k,l){var c=Infinity,g=0,e=Math.round,a=e(window.devicePixelRatio||1),r=80*a,f=48*a,t=3*a,u=2*a,d=3*a,m=15*a,n=74*a,p=30*a,q=document.createElement("canvas");q.width=r;q.height=f;q.style.cssText="width:80px;height:48px";var b=q.getContext("2d");b.font="bold "+9*a+"px Helvetica,Arial,sans-serif";b.textBaseline="top";b.fillStyle=l;b.fillRect(0,0,r,f);b.fillStyle=k;b.fillText(h,t,u);b.fillRect(d,m,n,p);b.fillStyle=l;b.globalAlpha=.9;b.fillRect(d,m,n,p);return{dom:q,update:function(f,
+v){c=Math.min(c,f);g=Math.max(g,f);b.fillStyle=l;b.globalAlpha=1;b.fillRect(0,0,r,m);
+
+b.fillStyle='hsl(' + 5000 * Math.random() + ', 150%, 50%)';
+b.fillText(e(f)+" "+h+" ("+e(c)+"-"+e(g)+")",t,u);b.drawImage(q,d+a,m,n-a,p,d,m,n-a,p);b.fillRect(d+n-a,m,a,p);b.fillStyle=l;b.globalAlpha=1.9;b.fillRect(d+n-a,m,a,e((1-f/v)*p))}}};"object"===typeof module&&(module.exports=Stats);
+// stats.min.js END
+//-----------------------------------------------------------
+/*
+
+Specially thanks to Nicholas Lobo. His pen helps me to complete the task: https://codepen.io/nicholas-fernandes-de-almeida
+
+I modify it with random color and effects. Thanks fo visiting the code. Enjoy.
+
+*/
+// WebGL Begins from here
+var WEBGL={isWebGLAvailable:function(){try{var e=document.createElement("canvas");return!(!window.WebGLRenderingContext||!e.getContext("webgl")&&!e.getContext("experimental-webgl"))}catch(e){return!1}},isWebGL2Available:function(){try{var e=document.createElement("canvas");return!(!window.WebGL2RenderingContext||!e.getContext("webgl2"))}catch(e){return!1}},getWebGLErrorMessage:function(){return this.getErrorMessage(1)},getWebGL2ErrorMessage:function(){return this.getErrorMessage(2)},getErrorMessage:function(e){var t={1:window.WebGLRenderingContext,2:window.WebGL2RenderingContext},n='Your $0 does not seem to support <a href="http://khronos.org/webgl/wiki/Getting_a_WebGL_Implementation" style="color:#fff">$1</a>',r=document.createElement("div");return r.id="webglmessage",r.style.fontFamily="monospace",r.style.fontSize="13px",r.style.fontWeight="normal",r.style.textAlign="center",r.style.background="#fff",r.style.color="#000",r.style.padding="1.5em",r.style.width="400px",r.style.margin="5em auto 0",n=(n=t[e]?n.replace("$0","graphics card"):n.replace("$0","browser")).replace("$1",{1:"WebGL",2:"WebGL 2"}[e]),r.innerHTML=n,r}};
+// WebGL.js END
+//----------------------------------------------------
+
+
+// My Code
+
+if (WEBGL.isWebGLAvailable() === false) {
+    document.body.appendChild(WEBGL.getWebGLErrorMessage());
+}
+
+var SCREEN_WIDTH = window.innerWidth,
+    SCREEN_HEIGHT = window.innerHeight,
+    r = 150,
+    mouseY = 0,
+    windowHalfY = window.innerHeight / 2,
+    camera, scene, renderer;
+
+init();
+animate();
+
+function init() {
+    camera = new THREE.PerspectiveCamera(100, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 2000);
+    camera.position.z = 1000;
+
+    scene = new THREE.Scene();
+
+    var i, line, material, p,
+        parameters = [
+        
+        
+        
+            [0.1, 0x8905D2, 0.1],
+            [0.1, 0x6249EE, 0.1],
+            [0.1, 0x8B40ED, 0.1],
+            [0.1, 0x466DED, 0.1],
+            [0.1, 0x7070F2, 0.1],
+            [0.1, 0x2B0CD5, 0.1],
+            [0.1, 0x7070F2, 0.1],
+            [0.1, 0x214FE6, 0.1],
+            [0.1, 0x5F08D3, 0.1]
+            
+        
+        ];
+
+    var geometry = createGeometry();
+
+    for (i = 0; i < parameters.length; ++i) {
+
+        p = parameters[i];
+
+        material = new THREE.LineBasicMaterial({
+            color: 'hsl(' + 5000 * Math.random() + ', 180%, 50%)',
+            opacity: p[9]
+        });
+
+        line = new THREE.LineSegments(geometry, material);
+        line.scale.x = line.scale.y = line.scale.z = p[0]++;
+        line.userData.originalScale = p[0];
+        line.rotation.y = Math.random() * Math.PI;
+        line.updateMatrix();
+        scene.add(line);
+    }
+
+    renderer = new THREE.WebGLRenderer({
+        antialias: true
+    });
+    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+    document.body.appendChild(renderer.domElement);
+
+    document.addEventListener('mousemove', onDocumentMouseMove, false);
+    document.addEventListener('touchstart', onDocumentTouchStart, false);
+    document.addEventListener('touchmove', onDocumentTouchMove, false);
+
+    window.addEventListener('resize', onWindowResize, false);
+
+    // test geometry swapability
+    setInterval(function () {
+        var geometry = createGeometry();
+        scene.traverse(function (object) {
+
+            if (object.isLine) {
+                object.geometry.dispose();
+                object.geometry = geometry;
+            }
+        });
+    }, 1000); // This was making the code go stuck
+}
+
+function createGeometry() {
+
+    var geometry = new THREE.BufferGeometry();
+    var vertices = [];
+
+    var vertex = new THREE.Vector3();
+
+    for (var i = 0; i < 1500; i++) {
+
+        vertex.x = Math.random() * 2 - 1;
+        vertex.y = Math.random() * 2 - 1;
+        vertex.z = Math.random() * 2 - 1;
+        vertex.normalize();
+        vertex.multiplyScalar(r);
+
+        vertices.push(vertex.x, vertex.y, vertex.z);
+
+        vertex.multiplyScalar(Math.random() * 0.01 + 0.98);
+
+        vertices.push(vertex.x, vertex.y, vertex.z);
+    }
+    geometry.addAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+
+    return geometry;
+}
+
+function onWindowResize() {
+
+    windowHalfY = window.innerHeight / 2;
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(window.innerWidth, window.innerHeight);
+}
+
+function onDocumentMouseMove(event) {
+    mouseY = event.clientY - windowHalfY;
+}
+
+function onDocumentTouchStart(event) {
+    if (event.touches.length > 1) {
+
+        //event.preventDefault();
+
+        mouseY = event.touches[0].pageY - windowHalfY;
+
+    }
+}
+
+function onDocumentTouchMove(event) {
+    if (event.touches.length == 1) {
+        //event.preventDefault();
+        mouseY = event.touches[0].pageY - windowHalfY;
+    }
+}
+//
+function animate() {
+
+    requestAnimationFrame(animate);
+
+    render();
+
+}
+
+ //for iOs by Mǟɖ↻ôɖɆⱤ💉
+function check_update_xyra(event, mouse_xyra) {
+  var x, y, r, a;
+  var tgtoffleft = 0;
+  var tgtofftop = 0;
+  var min_r, max_r, width;
+  if(event.touches) {
+    var touches = event.touches;
+    // Bit of code to calculate the actual Left and Top offsets by adding offsets 
+    // of each parent back through the hierarchy
+    var tgt = event.touches[0].target;
+    while (tgt) {
+      tgtoffleft = tgtoffleft + tgt.offsetLeft;
+      tgtofftop = tgtofftop + tgt.offsetTop;
+      tgt = tgt.offsetParent;
+    }
+    // x = (touches[0].pageX - touches[0].target.offsetLeft) - PIVOT_X;
+    // y = PIVOT_Y - (touches[0].pageY - touches[0].target.offsetTop);
+    x = (touches[0].pageX - tgtoffleft) - PIVOT_X;
+    y = PIVOT_Y - (touches[0].pageY - tgtofftop);
+  }
+  else {
+    x = event.offsetX - PIVOT_X;
+    y = PIVOT_Y - event.offsetY;
+  }
+  /* cartesian to polar coordinate conversion */
+  r = Math.sqrt(x * x + y * y);
+  a = Math.atan2(y, x);
+  mouse_xyra.x = x;
+  mouse_xyra.y = y;
+  mouse_xyra.r = r;
+  mouse_xyra.a = a;
+  if((r >= MIN_TOUCH_RADIUS) && (r <= MAX_TOUCH_RADIUS))
+    return true;
+  else
+    return false;
+}
+//_________________________________$    
+
+
+
+
+//
+var rpmY = 3;
+var rpmX = 2;
+function render() {
+
+    renderer.render(scene, camera);
+
+    var time = Date.now() * 0.0005;
+
+    for (var i = 0; i < scene.children.length; i += 1) {
+        var object = scene.children[i];
+        if (object.isLine) {
+            object.rotation.y = rpmY * (time * (i < 4 ? (i + 1) : -(i + 1)));
+            object.rotation.x = rpmX * (time * (i < 4 ? (i + 1) : -(i + 1)));
+            if (i < 9) {
+                var scale = object.userData.originalScale * (i / 5 + 0.1) * (1 + 20 * Math.sin(2 * time));
+                object.scale.x = object.scale.y = object.scale.z = scale;
+            }
+        }
+    }
+}};
+
+
+/*
+
+
+┈┈┈╲┈┈┈┈╱
+ ┈┈╱    ▔╲
+┈┈┃┈▇┈┈▇┈┃
+╭╮┣━━━━━━┫╭╮
+┃┃┃┈┈┈┈┈┈┃┃┃
+╰╯┃┈┈┈┈┈┈┃╰╯
+┈┈╰┓┏━━┓┏╯
+┈┈┈╰╯┈┈╰╯      
+
+😊You r always welcome 😊
+
+The EnD
+
+*/
+
+</script>
+    </body>
+</html>
+
+<!--
+
+...Thanks for reading this😁🤗
+
+⠀⠀⠀⠀⣠⣦⣤⣀
+⠀⠀⠀⠀⢡⣤⣿⣿
+⠀⠀⠀⠀⠠⠜⢾⡟
+⠀⠀⠀⠀⠀⠹⠿⠃⠄
+⠀⠀⠈⠀⠉⠉⠑⠀⠀⠠⢈⣆
+⠀⠀⣄⠀⠀⠀⠀⠀⢶⣷⠃⢵
+⠐⠰⣷⠀⠀⠀⠀⢀⢟⣽⣆⠀⢃
+⠰⣾⣶⣤⡼⢳⣦⣤⣴⣾⣿⣿⠞
+⠀⠈⠉⠉⠛⠛⠉⠉⠉⠙⠁
+⠀⠀⡐⠘⣿⣿⣯⠿⠛⣿⡄
+⠀⠀⠁⢀⣄⣄⣠⡥⠔⣻⡇
+⠀⠀⠀⠘⣛⣿⣟⣖⢭⣿⡇
+⠀⠀⢀⣿⣿⣿⣿⣷⣿⣽⡇
+⠀⠀⢸⣿⣿⣿⡇⣿⣿⣿⣇
+⠀⠀⠀⢹⣿⣿⡀⠸⣿⣿⡏
+⠀⠀⠀⢸⣿⣿⠇⠀⣿⣿⣿
+⠀⠀⠀⠈
+____maDCoder💉
+
+          
+😊THANKS FOR VISITING THE CODE😊
+
+　　　/)
+　　_(⌒)＿　　/)
+　／ / ﾉ　 ヽ /ﾋE)
+`/ｲ// /LLﾄLL|/ /
+-->
